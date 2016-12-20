@@ -39,7 +39,7 @@ public class App extends Application{
         super.onCreate();
         initFresco();
         mInstance = this;
-        AVOSCloud.initialize(this, "tCbmodbpAsdMYH8nAcKoKKN4-gzGzoHsz", "sb2SoCvdbO5AX9g0wtcD2hxO");
+        AVOSCloud.initialize(this, "tCbmodbpAsdMYH8nAcKoKKN4-gzGzoHsz", "");
 //        AVOSCloud.initialize(this, "Unbx3bnfTxJizCXIosNWDECp-gzGzoHsz", "M67PqvYisHIzhAK54j84XlJw");
         AVIMMessageManager.registerMessageHandler(AVIMTypedMessage.class, new Chat_MessageHandler(this));
         PushService.setDefaultPushCallback(this, SplashActivity.class);
