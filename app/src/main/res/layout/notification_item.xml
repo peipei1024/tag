@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp" >
+
+    <ImageView
+        android:id="@+id/id_notification_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/stat_sys_download" 
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/id_notification_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/id_notification_Image"
+        android:paddingLeft="26dp"
+        android:textSize="18sp"
+        android:text="tag"
+        android:textColor="#FFFFFFFF" />
+    <!-- android:textColor="#FF000000"  -->
+
+    <TextView
+        android:id="@+id/id_notification_Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_notification_Image"
+        android:paddingTop="2dp"
+        android:text="0%"
+        android:textColor="#FFFFFFFF" 
+        android:paddingLeft="16dp"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/id_notification_Progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/id_notification_Title"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/id_notification_Percent"
+        android:layout_below="@id/id_notification_Title"
+        android:paddingLeft="26dp"
+        android:paddingRight="3dp"
+        android:paddingTop="2dp" />
+
+</RelativeLayout>

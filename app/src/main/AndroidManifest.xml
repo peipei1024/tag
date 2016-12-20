@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.ngc123.tag"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- ************************************权限************************************************ -->
+    <!-- 基础模块（必须加入以下声明）START -->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.INTERNET"/>-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 基础模块 END -->
+    <!-- mob分享（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!-- mob分享 END -->
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Black.NoTitleBar">
+        <activity android:name=".ui.SplashActivity"
+            android:label="TAG"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.RegisterComActivity"
+                  android:label="完成注册"/>
+        <activity android:name=".ui.comment.CommentActivity"
+                  android:label="评论"/>
+        <activity android:name=".ui.comment.Comment1Activity"
+                  android:label="评论"/>
+        <activity android:name=".ui.PicActivity"
+                  android:label="查看图片"/>
+        <!--<activity android:name=".ui.person.PersonActivity"-->
+                  <!--android:label="其他人资料"/>-->
+        <activity android:name=".ui.person.Person1Activity"
+                  android:label="其他人资料"/>
+        <activity android:name=".ui.Login1Activity"
+                  android:label="登录页面1"/>
+        <activity android:name=".ui.AboutActivity"
+                  android:label="关于"/>
+        <activity android:name=".ui.SuggestActivity"
+                  android:label="意见反馈"/>
+        <activity android:name=".ui.WebviewActivity"
+                  android:label="新手指南/协议"/>
+        <activity android:name=".ui.PersonalMessActivity"
+                  android:label="个人信息页面"/>
+        <activity android:name=".ui.ChangeMessActivity"
+                  android:label="修改资料"/>
+        <activity android:name=".ui.notificat.FollowActivity"
+                  android:label="关注了我"/>
+        <activity android:name=".ui.notificat.CommentNoActivity"
+                  android:label="评论了我"/>
+        <activity android:name=".ui.notificat.LikeActivity"
+                  android:label="赞了我"/>
+        <activity android:name=".ui.forgetpassword.SMSActivity"
+                  android:label="忘记密码请求短信"/>
+        <activity android:name=".ui.forgetpassword.ForgetActivity"
+                  android:label="忘记密码修改密码"/>
+        <service android:name=".service.DownLabelService"/>
+        <!--18786278d1a8fe3ff4322242476082dc-->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
+            <intent-filter>
+                <data android:scheme="tencent1105416546" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 新浪微博客户端分享回调必须配置 -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        </activity>
+        <activity android:name=".ui.AddFriendsActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.MeFeedActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.mefollowees.MeFolloweesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.mefollowers.MeFollowersActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.askfriend.MeMyCommentsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.tag.MeMyFriendActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.MeMyPhotoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".ui.CameraActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+        </activity>
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
+        </activity>
+        <activity
+            android:name=".ui.CropPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".ui.AlbumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".ui.PhotoProcessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".ui.EditTextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".ui.PublishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+
+        <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
+        <activity
+            android:name="com.leancloud.im.tag.activity.Chat_AVSingleChatActivity"
+            android:launchMode="singleTop"
+            android:label="一对一聊天"
+            android:theme="@style/ChatTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name="com.leancloud.im.tag.activity.Chat_AVLoginActivity"
+            android:label="登录"
+            android:theme="@style/AVActivity.FullScreen">
+        </activity>
+        <service android:name="com.avos.avoscloud.PushService"/>
+        <receiver android:name="com.leancloud.im.tag.Chat_NotificationBroadcastReceiver"/>
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".push.MyFollowReceiver">
+            <intent-filter>
+                <action android:name="com.ngc.tag.follow"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".push.MyCommentReceiver">
+            <intent-filter>
+                <action android:name="com.ngc.tag.comment"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".push.MyLikeReceiver">
+            <intent-filter>
+                <action android:name="com.ngc.tag.like"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+
+        <!--图片选择器 START-->
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />
+
+        <activity android:name="me.nereo.multi_image_selector.PreviewPhotoActivity" />
+        <activity android:name="me.nereo.multi_image_selector.PhotoPreviewActivity"/>
+        <!--图片选择器 END-->
+
+        <service android:name=".update.UpdateService"/>
+    </application>
+
+</manifest>

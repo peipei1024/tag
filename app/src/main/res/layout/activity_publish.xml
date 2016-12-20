@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:elevation="@dimen/default_elevation">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:src="@drawable/img_toolbar_logo"-->
+                <!--android:text="分 享"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="18sp" />-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+
+        <RelativeLayout
+            android:background="@color/colorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/id_iv_back_arrow"
+                android:layout_width="wrap_content"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_height="40dp"
+                android:src="@mipmap/icon_grey_back_arrow"/>
+            <TextView
+                android:text="发布笔记"
+                android:textColor="#515151"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    <View
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorTitleLine"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:hint="说说你的心得吧"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorTitleLine"/>
+
+    <ImageView
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/ivPhoto"
+        android:layout_width="@dimen/publish_photo_thumbnail_size"
+        android:layout_height="@dimen/publish_photo_thumbnail_size"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/default_pic_load"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/id_btn_publish"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="发布"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorMain"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TAG</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="button_login">登陆</string>
+    <string name="button_XL">微博</string>
+    <string name="button_QQ">QQ</string>
+    <string name="button_signup">注册</string>
+    <string name="edit_username">注册的邮箱</string>
+    <string name="edit_password">密码</string>
+    <string name="button_confirm_login">账号登陆</string>
+    <string name="button_cancel_login">取消</string>
+    <string name="network_isnot_available">没有网络连接</string>
+    <string name="chat_utils_hardLoading">努力加载中...</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_like_counter">#2b5a83</color>
+    <color name="main_color">#628cf5</color>
+    <color name="status_bar_color">#3f66c0</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="yellow">#F3CE1E</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorbtnfoolow">#979797</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="common_background">#f5f3f0</color>
+    <color name="txt_color_gray_3">#cbc4c6</color>
+    <color name="crop_bg">#D5D5D5</color>
+    <color name="btn_register_pressed">#4ebcd3</color>
+    <color name="btn_register_normal">#2dafa3</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="clickNormal">#ffffff</color>
+    <color name="clickPress">#3F51B5</color>
+    <color name="clickTitlePress">#3F51B5</color>
+    <color name="clickTitleNormal">#3F51B5</color>
+
+
+
+    <color name="colorMain">#ec584d</color>
+    <color name="colorTab">#ffffff</color>
+    <color name="colorTabLine">#f0f0f0</color>
+    <color name="colorTitleLine">#c8c8c8</color>
+    <color name="colorTitle">#fafafa</color>
+    <color name="colorBackground">#efeff7</color>
+</resources>

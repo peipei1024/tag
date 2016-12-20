@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@color/colorBackground"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tag_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorTitle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_iv_back_arrow"
+            android:src="@mipmap/icon_grey_back_arrow"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="图片详情"
+            android:textColor="#515151"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/id_tv_share"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_grey_share_bar"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_below="@id/tag_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorTitleLine"/>
+
+    <LinearLayout
+        android:id="@+id/operate_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f9f9f9"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/id_et_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/comment_edit_shape"
+            android:hint="点赞什么都是套路,评论才是真爱"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"/>
+
+        <Button
+            android:id="@+id/id_btn_send"
+            android:layout_width="80dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btn_send_comment"
+            android:text="发送"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/operate_bottom"
+        android:layout_below="@id/tag_title"
+        android:id="@+id/id_swipe"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleview"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
